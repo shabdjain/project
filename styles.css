@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 15px;
+}
+
+.chatbot-container {
+    margin-top: 25px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 100vh;
+}
+
+.chatbot-heading{
+
+    text-align: center;
+}
+
+.chatbot-form{
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chatbot-paragraph{
+    font-size: larger;
+    text-align: center;
+}
+
+.chatbot-button{
+
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat {
+    margin-top: 20px;
+}
+
+.user-message {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    float: right;
+    clear: both;
+}
+
+.bot-message {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    float: left;
+    clear: both;
+}
+
+@media(max-width:1520px) {
+    .left-svg {
+        display: none;
+    }
+}
+/* small css for the mobile nav close */
+
+#nav-mobile-btn.close span:first-child {
+    transform: rotate(45deg);
+    top: 4px;
+    position: relative;
+    background: #a0aec0;
+}
+
+#nav-mobile-btn.close span:nth-child(2) {
+    transform: rotate(-45deg);
+    margin-top: 0px;
+    background: #a0aec0;
+}
+
+.dark {
+    filter: invert(1);
+    background: #252525;
+}
+
+.flip {
+    filter: invert(1);
+}
+
+.theme-switch {
+    cursor: pointer;
+}
