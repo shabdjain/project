@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.8.10/tailwind.min.css">
+    <title>Chatbot</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="h-24 w-full relative z-50">
+        <div class="container max-w-6xl mx-auto h-full flex justify-center sm:justify-between items-center px-8 xl:px-0">
+
+            <a href="/" class="inline-block h-full flex items-center h-5 relative font-black leading-none">
+                <svg class="h-6 w-auto fill-current text-indigo-600" viewBox="0 0 194 116" xmlns="http://www.w3.org/2000/svg">
+                        <g fill-rule="evenodd">
+                            <path
+                                d="M96.869 0L30 116h104l-9.88-17.134H59.64l47.109-81.736zM0 116h19.831L77 17.135 67.088 0z" />
+                            <path
+                                d="M87 68.732l9.926 17.143 29.893-51.59L174.15 116H194L126.817 0z" />
+                        </g>
+                    </svg>
+                <span class="text-xl ml-3 text-gray-800">Landmark<span
+                            class="text-pink-500">.</span></span>
+            </a>
+
+            <nav id="nav" class="absolute left-0 w-full md:w-auto text-gray-800 flex-col md:flex-row h-64 md:h-24 justify-between text-sm lg:text-base bg-white md:bg-transparent top-0 mt-24 md:mt-0 border-t md:border-none border-gray-200 pt-5 md:py-0 z-50 flex hidden md:flex items-center md:relative">
+                <a href="#" class="font-bold ml-0 md:ml-12 mr-0 md:mr-3 lg:mr-8 transition-color duration-100 hover:text-indigo-600">Home</a>
+                <a href="#features" class="font-bold mr-0 md:mr-3 lg:mr-8 transition-color duration-100 hover:text-indigo-600">Legal
+                        Track</a>
+                <a href="#pricing" class="font-bold mr-0 md:mr-3 lg:mr-8 transition-color duration-100 hover:text-indigo-600">Casepedia</a>
+                <a href="#testimonials" class="font-bold transition-color duration-100 hover:text-indigo-600">Aidproviders</a>
+                <a class="px-5 py-1 rounded theme-switch" onclick="theme()"><img id="theme-switch" src="https://img.icons8.com/ios-glyphs/30/000000/moon-symbol.png" style="width:20px;" class="inver" id="im"></a>
+                <div class="block md:hidden border-t border-gray-200 font-medium flex flex-col w-full">
+
+                </div>
+            </nav>
+
+            <div class="absolute left-0 md:relative w-full md:w-auto md:bg-transparent border-b md:border-none borde
+                r-gray-200idProviders mt-48 md:mt-0 flex-col md:flex-row pb-8 md:p-0 justify-center items-center md:items-end hidden md:flex md:justify-between">
+                <i class="fa-solid fa-user z-10 fa-2x"></i>
+
+                <svg class="hidden lg:block absolute w-screen max-w-3xl -mt-64 -ml-12 left-0 top-0" viewBox="0 0 818 815" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                            <lineargradient x1="0%" y1="0%" x2="100%" y2="100%"
+                                id="c">
+                                <stop stop-color="#E614F2" offset="0%" />
+                                <stop stop-color="#FC3832" offset="100%" />
+                            </lineargradient>
+                            <lineargradient x1="0%" y1="0%" x2="100%" y2="100%"
+                                id="f">
+                                <stop stop-color="#657DE9" offset="0%" />
+                                <stop stop-color="#1C0FD7" offset="100%" />
+                            </lineargradient>
+                            <filter x="-4.7%" y="-3.3%" width="109.3%"
+                                height="109.3%" filterUnits="objectBoundingBox"
+                                id="a">
+                                <feoffset dy="8" in="SourceAlpha"
+                                    result="shadowOffsetOuter1" />
+                                <fegaussianblur stdDeviation="8"
+                                    in="shadowOffsetOuter1"
+                                    result="shadowBlurOuter1" />
+                                <fecolormatrix
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+                                    in="shadowBlurOuter1" />
+                            </filter>
+                            <filter x="-4.7%" y="-3.3%" width="109.3%"
+                                height="109.3%" filterUnits="objectBoundingBox"
+                                id="d">
+                                <feoffset dy="8" in="SourceAlpha"
+                                    result="shadowOffsetOuter1" />
+                                <fegaussianblur stdDeviation="8"
+                                    in="shadowOffsetOuter1"
+                                    result="shadowBlurOuter1" />
+                                <fecolormatrix
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
+                                    in="shadowBlurOuter1" />
+                            </filter>
+                            <path
+                                d="M160.52 108.243h497.445c17.83 0 24.296 1.856 30.814 5.342 6.519 3.486 11.635 8.602 15.12 15.12 3.487 6.52 5.344 12.985 5.344 30.815v497.445c0 17.83-1.857 24.296-5.343 30.814-3.486 6.519-8.602 11.635-15.12 15.12-6.52 3.487-12.985 5.344-30.815 5.344H160.52c-17.83 0-24.296-1.857-30.814-5.343-6.519-3.486-11.635-8.602-15.12-15.12-3.487-6.52-5.343-12.985-5.343-30.815V159.52c0-17.83 1.856-24.296 5.342-30.814 3.486-6.519 8.602-11.635 15.12-15.12 6.52-3.487 12.985-5.343 30.815-5.343z"
+                                id="b" />
+                            <path
+                                d="M159.107 107.829H656.55c17.83 0 24.296 1.856 30.815 5.342 6.518 3.487 11.634 8.602 15.12 15.12 3.486 6.52 5.343 12.985 5.343 30.816V656.55c0 17.83-1.857 24.296-5.343 30.815-3.486 6.518-8.602 11.634-15.12 15.12-6.519 3.486-12.985 5.343-30.815 5.343H159.107c-17.83 0-24.297-1.857-30.815-5.343-6.519-3.486-11.634-8.602-15.12-15.12-3.487-6.519-5.343-12.985-5.343-30.815V159.107c0-17.83 1.856-24.297 5.342-30.815 3.487-6.519 8.602-11.634 15.12-15.12 6.52-3.487 12.985-5.343 30.816-5.343z"
+                                id="e" />
+                        </defs>
+                        <g fill="none" fill-rule="evenodd" opacity=".9">
+                            <g transform="rotate(65 416.452 409.167)">
+                                <use fill="#000" filter="url(#a)"
+                                    xlink:href="#b" />
+                                <use fill="url(#c)" xlink:href="#b" />
+                            </g>
+                            <g transform="rotate(29 421.929 414.496)">
+                                <use fill="#000" filter="url(#d)"
+                                    xlink:href="#e" />
+                                <use fill="url(#f)" xlink:href="#e" />
+                            </g>
+                        </g>
+                    </svg>
+            </div>
+
+            <div id="nav-mobile-btn" class="w-6 absolute block md:hidden right-0 top-0 mr-10 mt-8 sm:mt-10 z-50 cursor-pointer select-none">
+                <span class="w-full h-1 mt-2 sm:mt-1 bg-gray-800 rounded-full block transform duration-200"></span>
+                <span class="w-full h-1 mt-1 bg-gray-800 rounded-full block  transform duration-200"></span>
+            </div>
+
+        </div>
+    </header>
+    <!-- End Header Section-->
+    
+    <div class="chatbot-container">
+        <h1 class="chatbot-heading">Chatbot</h1>
+        <p class="chatbot-paragraph">Ask any query related to our website</p>
+        <form class="chatbot-form" method="POST" action="/ask">
+            <input type="text" id="user_input" name="user_input" placeholder="Ask a question...">
+            <button class="chatbot-button" type="submit">Ask</button>
+            <button type="submit" class="ask-button">Ask</button>
+            <button type="submit" id="voice_input_button">Voice Input</button>
+        </form>
+        <div class="chat">
+            {% if user_input %}
+                <div class="user-message">{{ user_input }}</div>
+                <div class="bot-message">{{ response }}</div>
+            {% endif %}
+        </div>
+        <!-- Embed the chatbot using the iframe code -->
+    <iframe src="https://my_chatbot.com" width="400" height="600"></iframe>
+    </div>
+
+    <script>
+        document.querySelector(".ask-button").addEventListener("click", function() {
+            document.querySelector("#ask form").submit();
+        });
+
+        const speechRecognition = new webkitSpeechRecognition() || window.SpeechRecognition;
+
+        document.getElementById("voice_input_button").addEventListener("click", function() {
+            document.getElementById("voice_input_button").disabled = true; // Disable the button during recognition
+            document.getElementById("voice_input_button").textContent = "Listening...";
+            speechRecognition.start();
+        });
+
+        speechRecognition.onresult = function(event) {
+            const userInputField = document.getElementById("user_input");
+            userInputField.value = event.results[0][0].transcript;
+            document.getElementById("voice_input_button").textContent = "Voice Input";
+            document.getElementById("voice_input_button").disabled = false; // Enable the button after recognition
+        };
+
+        // Add a listener to the `user_input` input element to submit the form when the user enters a question and presses enter.
+        document.getElementById("user_input").addEventListener("keypress", function(event) {
+            if (event.keyCode === 13) {
+                document.querySelector("#ask form").submit();
+            }
+        });
+
+        // Add a listener to the chatbot response to scroll to the bottom of the chatbot window when the response is updated.
+        document.getElementById("response").addEventListener("DOMSubtreeModified", function() {
+            document.getElementById("chatbot").scrollTo(0, document.getElementById("chatbot").scrollHeight);
+        });
+    </script>
+</body>
+</html>
